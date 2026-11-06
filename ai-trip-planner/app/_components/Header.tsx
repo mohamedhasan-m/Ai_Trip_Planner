@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { SignInButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -51,10 +52,11 @@ function Header() {
       </div>
 
       {/* Get Started */}
+      <SignInButton mode='modal'>
       <Button>
         Get Started
       </Button>
-
+      </SignInButton>
     </div>
   )
 }
