@@ -4,6 +4,7 @@ import "./globals.css";
 import Provider from "./provider";
 import Header from "./_components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 
 export const metadata: Metadata = {
   title: "AI Trip Planner",
@@ -23,10 +24,10 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={outfit.className}>
-        <Provider>
+        <ConvexClientProvider>
           <Header />
           {children}
-        </Provider>
+        </ConvexClientProvider>
       </body>
     </html>
     </ClerkProvider>
